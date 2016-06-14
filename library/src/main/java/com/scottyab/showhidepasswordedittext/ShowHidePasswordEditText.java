@@ -133,7 +133,7 @@ public class ShowHidePasswordEditText extends AppCompatEditText {
 
     if (event.getAction() == MotionEvent.ACTION_UP && drawableEnd != null) {
       bounds = drawableEnd.getBounds();
-      final int x = (int) event.getX();
+      final int x = (int) event.getX() + getPaddingRight();
 
       //check if the touch is within bounds of drawableEnd icon
       if ((leftToRight && (x >= (this.getRight() - bounds.width()))) ||
